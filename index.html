@@ -212,7 +212,7 @@ h3 {
         }
 
         .dasim-feature-card {
-            background: linear-gradient(135deg, rgba(20, 57, 92, 0.893) 0%, rgb(16, 43, 118));            
+            background: linear-gradient(135deg, rgba(15, 45, 73, 0.893) 0%, rgb(11, 32, 90));            
 
             color: white;
             padding: 35px 25px;
@@ -289,7 +289,7 @@ h3 {
 
 
 
-
+ 
 
 
 
@@ -337,25 +337,184 @@ h3 {
 
 
 
-<div class="abo">
+<style>
+  :root {
+    --text-dark: #1a1a1a;
+    --text-gray: #595959;
+    --accent-blue: #1c3a6e;
+    --max-width: 1100px;
+  }
 
 
 
-    <H1>Hello There my buddies</H1>
+
+  .about-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-gray);
+    margin-bottom: 16px;
+  }
+
+  .heading {
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0 0 32px 0;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .left p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+  }
+
+  .left p strong,
+  .closing p strong {
+    color: var(--text-dark);
+    font-weight: 700;
+  }
+
+  .right h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    margin: 0 0 28px 0;
+  }
+
+  .right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .right li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .right li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-gray);
+    margin-top: 10px;
+  }
+
+  .closing {
+    margin-top: 40px;
+  }
+
+  .closing p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .cta {
+ 
+    margin-top: 32px;
+    background: linear-gradient(135deg, rgba(27, 83, 136, 0.893) 0%, rgb(26, 60, 152));            
+
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 13px;
+    padding: 18px 3px;
+    text-transform: uppercase;
+  }
+
+  .cta:hover {
+    background: #2a2a2a;
+  }
+
+  /* Responsive: stack columns on smaller screens */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 48px 20px;
+    }
+
+    .heading {
+      font-size: 20px;
+    }
+
+    .columns {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .left p,
+    .right li,
+    .closing p {
+      font-size: 15px;
+    }
+
+    .cta {
+      display:inline-block;
+      justify-self: center;
+      text-align: center;
+      padding: 12px 15px;
+      border-radius: 25px;
+    }
+  }
+</style>
 
 
-</div>
+<section class="about-section">
+  <p class="eyebrow">Welcome To THE MAINTENANCE TEAM</p>
+  <h1 class="heading">Quality You Can Trust in Every Project</h1>
 
+  <div class="columns">
+    <div class="left">
+      <p>
+        THE MAINTENANCE TEAM is a locally trusted property maintenance and renovation business serving Cape Town and surrounding areas. With <strong>10 years of experience</strong>, our mission is to deliver exceptional craftsmanship and reliable service to homeowners, property agencies, and commercial clients.
+      </p>
+      <p>
+        We specialize in <strong>expert paving installation, professional interior painting, plumbing, waterproofing, and complete home renovations</strong>, ensuring that every project exceeds expectations with quality workmanship and attention to detail.
+      </p>
+    </div>
 
+    <div class="right">
+      <h2>What Sets Us Apart:</h2>
+      <ul>
+        <li>Trusted by 90% of Cape Town's top property agencies</li>
+        <li>Comprehensive 10-year warranty on all our work</li>
+        <li>Free consultations and transparent quotations</li>
+        <li>Expert service for residential complexes, offices, and hotels</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="ab">
+  <div class="closing">
+    <p>
+      At THE MAINTENANCE TEAM, we don't just complete jobs — we build lasting relationships with our clients based on <strong>reliability, quality, and commitment</strong> to transforming and maintaining your property.
+    </p>
+    <a href="#" class="cta">Get A Quote</a>
+  </div>
+</section>
 
-
-
-    <H1>Hello There my buddies</H1>
-
-
-</div>
 
 
 
