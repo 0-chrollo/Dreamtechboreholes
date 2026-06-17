@@ -505,6 +505,565 @@ h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+ .prc {
+
+    
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  /* ---------- shell ---------- */
+
+  .pricing {
+    
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(12, 37, 60, 0.893) 0%, rgb(23, 51, 125));            
+
+    border-radius: 6px;
+    box-shadow: 0 16px 36px rgba(8, 20, 32, 0.2);
+    overflow: hidden;
+  }
+
+  .pricing__intro {
+    padding: 32px 32px 4px;
+  }
+
+  .pricing__eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .pricing__eyebrow-row::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: #4FB8E0;
+    display: inline-block;
+  }
+
+  .pricing__eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4FB8E0;
+  }
+
+  .pricing__heading {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.1rem + 2vw, 2.3rem);
+    color: #F4F8FA;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  .pricing__sub {
+    font-size: 0.98rem;
+    color: #B7C8D4;
+    max-width: 46ch;
+    line-height: 1.5;
+  }
+
+  /* ---------- two-column body ---------- */
+
+  .pricing__body {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 24px;
+    padding: 20px 32px 32px;
+    align-items: start;
+  }
+
+  .pricing__main {
+    min-width: 0;
+  }
+
+  .pricing__side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ---------- table ---------- */
+
+  .table-card {
+    background: #FFFFFF;
+    overflow: hidden;
+  }
+
+  .pricing__table-wrap {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #146C94 #E4E8E4;
+  }
+
+  .pricing__table-wrap::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .pricing__table-wrap::-webkit-scrollbar-track {
+    background: #E4E8E4;
+  }
+
+  .pricing__table-wrap::-webkit-scrollbar-thumb {
+    background: #146C94;
+    border-radius: 4px;
+  }
+
+  .pricing__table-wrap::-webkit-scrollbar-thumb:hover {
+    background: #0F5E80;
+  }
+
+  .pricing__table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+  }
+
+  .pricing__table thead th {
+    background: #1F2D33;
+    color: #F2F5F3;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 13px 16px;
+  }
+
+  .pricing__table thead th:last-child,
+  .pricing__table tbody td.total-cell {
+    text-align: right;
+  }
+
+  .pricing__table tbody tr {
+    border-bottom: 1px solid #E4E8E4;
+    transition: background 0.15s ease;
+  }
+
+  .pricing__table tbody tr:nth-child(even) {
+    background: #F8F9F8;
+  }
+
+  .pricing__table tbody tr:hover {
+    background: #EEF4F6;
+  }
+
+  .pricing__table td {
+    padding: 14px 16px;
+    vertical-align: middle;
+  }
+
+  .depth-cell {
+    width: 220px;
+  }
+
+  .depth-cell__value {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1F2D33;
+    margin-bottom: 6px;
+  }
+
+  .depth-cell__bar {
+    display: block;
+    width: 130px;
+    height: 6px;
+    background: #DCE3DE;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .depth-cell__bar span {
+    display: block;
+    height: 100%;
+    background: #146C94;
+    border-radius: 3px;
+  }
+
+  .services-cell {
+    color: #586259;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+
+  .total-cell {
+    font-weight: 700;
+    font-size: 0.98rem;
+    color: #1B2420;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-end;
+    padding: 0 20px 10px;
+    font-size: 0.72rem;
+    color: #93A8B6;
+  }
+
+  .scroll-hint__arrow {
+    animation: scroll-hint-nudge 1.4s ease-in-out infinite;
+  }
+
+  @keyframes scroll-hint-nudge {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
+
+  /* ---------- notice strip ---------- */
+
+  .notice {
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: #FBF1E8;
+    border-left: 3px solid #B5651D;
+    border-radius: 4px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .notice__icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: #B5651D;
+    margin-top: 1px;
+  }
+
+  .notice p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #4A3825;
+  }
+
+  .notice strong {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #B5651D;
+    margin-bottom: 4px;
+  }
+
+  .panel {
+ 
+    border: 1px solid #E4E8E4;
+    border-radius: 6px;
+    padding: 22px 24px;
+  }
+
+  .panel h3 {
+    font-family: 'Zilla Slab', Georgia, serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #1F2D33;
+    margin-bottom: 16px;
+  }
+
+  .panel__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid #EEF1EE;
+    font-size: 0.88rem;
+  }
+
+  .panel__row:last-child {
+    border-bottom: none;
+  }
+
+  .panel__row dt {
+    color: #586259;
+  }
+
+  .panel__row dd {
+    font-weight: 600;
+    color: #1B2420;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #146C94;
+    outline-offset: 2px;
+  }
+
+  /* ---------- responsive ---------- */
+
+  @media (max-width: 880px) {
+    .pricing__intro,
+    .pricing__body {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .pricing__intro,
+    .pricing__body {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .pricing__body {
+      grid-template-columns: 1fr;
+    }
+
+    .notice {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .prc {
+      padding: 0px 0 56px;
+    }
+
+    .pricing {
+      border-radius: 0;
+    }
+
+    .scroll-hint {
+      display: flex;
+    }
+
+    .pricing__intro,
+    .pricing__body {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    .pricing__table {
+      min-width: 540px;
+    }
+
+    .pricing__table thead th {
+      font-size: 0.6rem;
+      padding: 11px 14px;
+    }
+
+    .pricing__table td {
+      padding: 12px 14px;
+    }
+
+    .depth-cell__value {
+      font-size: 0.8rem;
+    }
+
+    .services-cell {
+      font-size: 0.73rem;
+    }
+
+    .total-cell {
+      font-size: 0.83rem;
+    }
+
+    .depth-cell__bar {
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .pricing__heading {
+      font-size: 1.4rem;
+    }
+
+    .pricing__sub {
+      font-size: 0.9rem;
+    }
+
+    .panel {
+      padding: 18px 16px;
+    }
+
+    .panel__row {
+      font-size: 0.82rem;
+    }
+
+    .notice p {
+      font-size: 0.82rem;
+    }
+  }
+
+</style>
+
+<section class="prc">
+
+<div class="pricing">
+
+  <div class="pricing__intro">
+
+    <h1 class="pricing__heading">Borehole drilling packages</h1>
+    <p class="pricing__sub">Reliable water solutions for home, farm, and industry. Every package below includes drilling, casing, pump and installation.</p>
+  </div>
+
+  <div class="pricing__body">
+
+    <div class="pricing__main">
+
+      <div class="table-card">
+        <div class="pricing__table-wrap">
+          <table class="pricing__table">
+          <caption class="sr-only">Borehole drilling package pricing by depth</caption>
+          <thead>
+            <tr>
+              <th scope="col">Depth</th>
+              <th scope="col">Included services</th>
+              <th scope="col">Package total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">30 m</span>
+                <span class="depth-cell__bar"><span style="width: 30%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R19,200</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">40 m</span>
+                <span class="depth-cell__bar"><span style="width: 40%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R25,600</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">50 m</span>
+                <span class="depth-cell__bar"><span style="width: 50%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R32,000</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">60 m</span>
+                <span class="depth-cell__bar"><span style="width: 60%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R38,400</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">70 m</span>
+                <span class="depth-cell__bar"><span style="width: 70%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R44,800</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">80 m</span>
+                <span class="depth-cell__bar"><span style="width: 80%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R51,200</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">90 m</span>
+                <span class="depth-cell__bar"><span style="width: 90%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R57,600</td>
+            </tr>
+            <tr>
+              <td class="depth-cell">
+                <span class="depth-cell__value">100 m</span>
+                <span class="depth-cell__bar"><span style="width: 100%;"></span></span>
+              </td>
+              <td class="services-cell">Drilling, PVC casing, pump &amp; installation</td>
+              <td class="total-cell">R64,000</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Swipe to see all columns</span>
+        <svg class="scroll-hint__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 6 15 12 9 18"></polyline>
+        </svg>
+      </div>
+
+      <div class="notice">
+        <svg class="notice__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12" y2="17.01"></line>
+        </svg>
+        <p>
+          <strong>Important notice</strong>
+          Extra steel casing may be charged depending on the soil formation encountered.
+        </p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="scripts.js"></script>
 </body>
 </html>
