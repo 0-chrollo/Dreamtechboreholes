@@ -301,37 +301,6 @@ h3 {
 
 
 
-<style>
-
-.abo{
-      padding: auto;
-      background-image: url('cleanwater.webp');
-      background-size: cover;
-      background-position: center;
-      background-attachment:fixed;
-      background-color: #12141f;
-      position: relative;
-    }
-  
-    .abo::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.785);
-      pointer-events: none;
-    }
-  
-    .hw-wrap {
-      position: relative;
-      z-index: 1;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-  
-
-</style>
-
-
 
 
 <style>
@@ -853,7 +822,7 @@ h3 {
 
   @media (max-width: 600px) {
     .prc {
-      padding: 0px 0 56px;
+  
     }
 
     .pricing {
@@ -1031,13 +1000,205 @@ h3 {
     </div>
 
 
-
   </div>
-
 
 
 </div>
 
+</section>
+
+
+
+
+
+
+<section class="abo">
+
+
+    <style>
+    
+    .abo{
+          padding: auto;
+          background-image: url('cleanwater.webp');
+          background-size: cover;
+          background-position: center;
+          background-attachment:fixed;
+          background-color: #12141fb8;
+          position: relative;
+        }
+      
+        .abo::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.722);
+     
+        }
+      
+    </style>
+
+<style>
+
+    .hw-wrap {
+     position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  
+    .hw-intro {
+      max-width: 660px;
+      margin-bottom: 60px;
+      color:white
+    }
+  
+    .hw-intro h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+  
+    .hw-intro p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 32px;
+    }
+  
+    .hw-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #76ed4e7b;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.55);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+  
+    .hw-btn:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: #fff;
+    }
+  
+    .hw-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  
+    .hw-card {
+        background: linear-gradient(135deg, rgba(12, 37, 60, 0.893) 0%, rgb(23, 51, 125));            
+
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  
+    .hw-card-lines {
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      width: 220px;
+      height: 180px;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  
+    .hw-card h2 {
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
+      position: relative;
+      z-index: 1;
+    }
+  
+    .hw-card p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.55);
+      position: relative;
+      z-index: 1;
+    }
+  
+    @media (max-width: 680px) {
+      .hw-section { padding: 60px 20px 70px; }
+      .hw-grid { grid-template-columns: 1fr; }
+      .hw-card { padding: 30px 24px; }
+    }
+  </style>
+  
+  <section class="hw-section">
+    <div class="hw-wrap">
+  
+      <div class="hw-intro">
+        <h1>How ISBC supports your business</h1>
+        <p>We help local businesses grow through networking, exposure, collaboration and strategic opportunities connecting entrepreneurs across Nelson Mandela Bay with the right people, the right platforms and the right support.</p>
+     
+      </div>
+  
+      <div class="hw-grid">
+  
+        <div class="hw-card">
+          <svg class="hw-card-lines" viewBox="0 0 220 180" fill="none">
+            <line x1="220" y1="180" x2="0"   y2="30"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="30"  y2="60"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="70"  y2="90"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="110" y2="120" stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="155" y2="155" stroke="#c0392b" stroke-width="1"/>
+          </svg>
+          <h2>Networking</h2>
+          <p>Connect with fellow entrepreneurs at business breakfasts, Power Hour sessions, expos and networking events designed to build real relationships and open new doors for your business.</p>
+        </div>
+  
+        <div class="hw-card">
+          <svg class="hw-card-lines" viewBox="0 0 220 180" fill="none">
+            <line x1="220" y1="180" x2="0"   y2="30"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="30"  y2="60"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="70"  y2="90"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="110" y2="120" stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="155" y2="155" stroke="#c0392b" stroke-width="1"/>
+          </svg>
+          <h2>Exposure</h2>
+          <p>Get your business seen. Members are showcased across ISBC platforms, events and our business directory — putting your brand in front of the right audience in the Nelson Mandela Bay area.</p>
+        </div>
+  
+        <div class="hw-card">
+          <svg class="hw-card-lines" viewBox="0 0 220 180" fill="none">
+            <line x1="220" y1="180" x2="0"   y2="30"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="30"  y2="60"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="70"  y2="90"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="110" y2="120" stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="155" y2="155" stroke="#c0392b" stroke-width="1"/>
+          </svg>
+          <h2>Membership Benefits</h2>
+          <p>Unlock exclusive member perks including discounted advertising on KingFisher FM, access to business resources, referral opportunities and a community of entrepreneurs invested in each other's success.</p>
+        </div>
+  
+        <div class="hw-card">
+          <svg class="hw-card-lines" viewBox="0 0 220 180" fill="none">
+            <line x1="220" y1="180" x2="0"   y2="30"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="30"  y2="60"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="70"  y2="90"  stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="110" y2="120" stroke="#c0392b" stroke-width="1"/>
+            <line x1="220" y1="180" x2="155" y2="155" stroke="#c0392b" stroke-width="1"/>
+          </svg>
+          <h2>Growth & Development</h2>
+          <p>Access workshops, training opportunities and strategic guidance built for small business owners — giving you the skills, knowledge and support to scale your business sustainably in a competitive market.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
 </section>
 
 
@@ -1050,6 +1211,138 @@ h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+    <div class="ft-inner">
+  
+      <!-- Logo -->
+      <a href="index.html" class="ft-logo">
+        <div class="ft-logo-placeholder"><img src="Ncmlogo.png"></div>
+        <div class="ft-logo-wordmark">
+          <strong>NCM</strong>
+          <span>National Crown Movers</span>
+        </div>
+      </a>
+  
+      <!-- Social icons -->
+      <div class="ft-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/27774800979" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+  
+      <!-- 2-column link grid -->
+      <div class="ft-grid">
+  
+        <!-- Col 1: Contact Info -->
+        <div class="ft-section">
+          <p class="ft-section-title">Contact Us</p>
+          <ul>
+            <li><a href="tel:+27774800979">077 480 0979</a></li>
+            <li><a href="https://wa.me/27774800979">WhatsApp Us</a></li>
+            <li><a href="mailto:nationalcrownmovers@gmail.com">nationalcrownmovers@gmail.com</a></li>
+            <li><a href="#">Mon – Sat: 08:00 – 14:00</a></li>
+          </ul>
+        </div>
+  
+        <!-- Col 2: Quick Links -->
+        <div class="ft-section">
+          <p class="ft-section-title">Quick Links</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Get A Quote</a></li>
+          </ul>
+        </div>
+  
+        <!-- Col 3: Get Moving -->
+        <div class="ft-section">
+          <p class="ft-section-title">Get Moving</p>
+          <ul>
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="tel:+27774800979">Call Us Now</a></li>
+            <li>
+              <a href="contact.html" class="ft-btn-member" style="color:#ffffff;"><i class="fa-solid fa-paper-plane"></i> Get A Quote</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+  
+      <!-- Bottom bar -->
+      <div class="ft-bottom">
+        <p class="ft-copy">&copy; 2026 National Crown Movers. All rights reserved.</p>
+        <div class="ft-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+  
+    </div>
+  </footer>
+  
+  
+  
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27774800979" target="_blank" class="whatsapp-float">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Chat with us</span>
+    </a>
+    
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 40px;
+        right: 18px;
+        background: linear-gradient(135deg, rgba(12, 37, 60, 0.978) 0%, rgb(23, 51, 125));            
+
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        box-shadow: 0 4px 20px rgba(86, 86, 86, 0.381);
+        z-index: 9999;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+    
+      .whatsapp-float i {
+        font-size: 18px;
+      }
+    
+      .whatsapp-float:hover {
+        transform: translateY(-3px);
+      }
+    </style>
+  
+  
 
 
 
